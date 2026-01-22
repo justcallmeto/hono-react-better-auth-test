@@ -1,0 +1,11 @@
+services: 
+  postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    container_name: hono-todos-new
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: todos-new
